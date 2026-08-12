@@ -99,6 +99,8 @@ p{margin:0}
 .carrossel{display:flex;gap:14px;overflow-x:auto;padding:0 22px 6px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .carrossel::-webkit-scrollbar{display:none}
 .carrossel .placeholder{flex:none;width:210px;height:300px;border-radius:12px;scroll-snap-align:start}
+.carrossel .depoimento{flex:none;width:300px;border-radius:12px;overflow:hidden;scroll-snap-align:start;border:1px solid rgba(94,58,30,.14);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.carrossel .depoimento img{width:100%;height:auto;display:block}
 
 .oferta{background:var(--castanho)}
 .oferta h2{color:var(--areia);font-size:30px;margin-bottom:26px}
@@ -295,11 +297,22 @@ footer a{color:rgba(156,136,114,.9)}
 <section data-reveal style="background:var(--areia);padding-left:0;padding-right:0">
   <p class="label" style="margin:0 22px 14px">Prova</p>
   <h2 style="font-size:26px;line-height:1.25;margin:0 22px 22px">O que as mães mandam depois</h2>
-  <div class="carrossel">
-    <div class="placeholder">print WhatsApp</div>
-    <div class="placeholder">print WhatsApp</div>
-    <div class="placeholder">print WhatsApp</div>
-    <div class="placeholder">print WhatsApp</div>
+  <div class="carrossel" id="carrossel-depoimentos">
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0599.jpg" alt="Depoimento de Marcela Vieira" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0575.jpg" alt="Depoimento de Maíra Lopes" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0602.jpg" alt="Depoimento de Magali de Castilho Tomé" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0577.jpg" alt="Depoimento de Tatiana Amaral" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0569.jpg" alt="Depoimento de Camila Soares Barbosa" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0581.jpg" alt="Depoimento de Naíse Mascarenhas" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0576.jpg" alt="Depoimento de Martha Jung" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0574.jpg" alt="Depoimento de Rubia Kelly" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0583.jpg" alt="Depoimento de Valquiria Amorim" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0598.jpg" alt="Depoimento de Giseli Iara" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0589.jpg" alt="Depoimento de Ingrid de Souza" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0586.jpg" alt="Depoimento de Ligia Mara" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0582.jpg" alt="Depoimento de Carla Teixeira Felix" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0578.jpg" alt="Depoimento de Cinara Lopes" loading="lazy"></div>
+    <div class="depoimento"><img src="assets/depoimentos/IMG_0603.jpg" alt="Depoimento de Luciliam de Castro" loading="lazy"></div>
   </div>
   <p style="font-family:var(--f-ui);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pedra);margin:16px 22px 0">Arraste para o lado →</p>
 </section>
@@ -316,8 +329,8 @@ footer a{color:rgba(156,136,114,.9)}
   <p class="label label-ouro" style="font-size:11px;letter-spacing:.2em;margin-bottom:10px">Por</p>
   <p class="preco">12x R$ 51,04</p>
   <p class="a-vista">ou R$ 497 à vista</p>
-  <a class="cta" href="#" style="margin-bottom:12px">Quero formar meu filho leitor</a>
-  <a class="cta-vazado" href="#">Pagar R$ 497 à vista</a>
+  <a class="cta" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10" style="margin-bottom:12px">Quero formar meu filho leitor</a>
+  <a class="cta-vazado" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10">Pagar R$ 497 à vista</a>
   <p class="seguranca">Compra segura via Hotmart · Cartão, Pix ou boleto</p>
 </section>
 
@@ -333,7 +346,7 @@ footer a{color:rgba(156,136,114,.9)}
 <section class="autora" data-reveal>
   <p class="label label-ouro" style="margin-bottom:22px">Quem ensina</p>
   <div class="topo-bio">
-    <div class="placeholder placeholder-escuro foto">foto</div>
+    <img class="foto" src="assets/foto-kemily.jpg" alt="Foto de Prof. Kemily Rodrigues" style="object-fit:cover">
     <div>
       <h3>Prof. Kemily Rodrigues</h3>
       <p class="label label-ouro" style="letter-spacing:.18em;margin:0">Literatura · Educação Clássica</p>
@@ -367,7 +380,7 @@ footer a{color:rgba(156,136,114,.9)}
 
 <section class="fechamento" data-reveal>
   <p class="citacao">“A leitura não é fuga da realidade — é o caminho mais profundo para compreendê-la.”</p>
-  <a class="cta" href="#">Quero formar meu filho leitor</a>
+  <a class="cta" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10">Quero formar meu filho leitor</a>
   <p class="sob-cta">12x de R$ 51,04 · 7 dias de garantia</p>
 </section>
 
@@ -423,6 +436,26 @@ footer a{color:rgba(156,136,114,.9)}
   window.addEventListener('scroll', atualizar, { passive: true });
   window.addEventListener('resize', atualizar);
   atualizar();
+
+  var carrossel = document.getElementById('carrossel-depoimentos');
+  if (carrossel) {
+    var autoplay = null;
+    var pausado = false;
+    function passo(){
+      if (pausado) return;
+      var fim = carrossel.scrollWidth - carrossel.clientWidth - 4;
+      if (carrossel.scrollLeft >= fim) { carrossel.scrollTo({ left: 0, behavior: 'smooth' }); }
+      else { carrossel.scrollBy({ left: 314, behavior: 'smooth' }); }
+    }
+    function iniciar(){ if (!autoplay) autoplay = setInterval(passo, 3200); }
+    function pausar(){ pausado = true; clearInterval(autoplay); autoplay = null; setTimeout(function(){ pausado = false; iniciar(); }, 6000); }
+    carrossel.addEventListener('pointerdown', pausar);
+    carrossel.addEventListener('wheel', pausar, { passive: true });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) iniciar(); else { clearInterval(autoplay); autoplay = null; } });
+    }, { threshold: 0.4 });
+    io.observe(carrossel);
+  }
 })();
 </script>
 </body>
