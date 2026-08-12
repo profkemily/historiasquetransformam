@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Histórias que Transformam · Prof. Kemily Rodrigues</title>
+<meta name="description" content="Curso online para mães de 0 a 12 anos: da escolha do livro certo à leitura em voz alta que prende a atenção do começo ao fim.">
+<meta property="og:title" content="Seu filho pode amar ler. Você só precisa saber mediar.">
+<meta property="og:description" content="Curso online com a Prof. Kemily Rodrigues · 6 módulos, 3 pilares, acesso por 1 ano.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Niconne&display=swap" rel="stylesheet">
+<style>
+:root{
+  --castanho:#5E3A1E; --terracota:#A05C3A; --vinho:#6B2D3E; --ouro:#E4B725;
+  --areia:#F4ECD8; --pedra:#9C8872; --tinta:#2A1B0F;
+  --f-logo:'Niconne',cursive; --f-titulo:'Playfair Display',Georgia,serif;
+  --f-corpo:'Lora',Georgia,serif; --f-ui:'Montserrat',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tinta);font-family:var(--f-corpo);color:var(--tinta);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--terracota);text-decoration:none}
+a:hover{color:var(--castanho)}
+button{font:inherit}
+
+.page{width:100%;max-width:480px;margin:0 auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 0 80px rgba(0,0,0,.45)}
+section{padding:52px 22px}
+.label{font-family:var(--f-ui);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--terracota);margin:0 0 14px}
+.label-ouro{color:var(--ouro)}
+h1,h2,h3{font-family:var(--f-titulo);margin:0}
+h2{font-size:28px;font-weight:700;line-height:1.2;color:var(--castanho);margin:0 0 22px}
+p{margin:0}
+.filete{width:44px;height:1px;background:var(--ouro);margin:22px 0}
+
+.topo{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(94,58,30,.14);display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.marca{font-family:var(--f-logo);font-size:29px;color:var(--castanho);line-height:1}
+.btn-menu{font-family:var(--f-ui);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--castanho);background:none;border:1px solid rgba(94,58,30,.28);border-radius:100px;padding:9px 18px;cursor:pointer}
+.btn-menu:hover{background:var(--areia)}
+.menu{display:none;position:sticky;top:57px;z-index:39;background:var(--castanho);padding:18px 22px 22px;flex-direction:column}
+.menu.aberto{display:flex}
+.menu a{font-size:15px;color:var(--areia);padding:11px 0;border-bottom:1px solid rgba(228,183,37,.16)}
+.menu a:last-child{border-bottom:none}
+.menu a:hover{color:var(--ouro)}
+
+.cta{display:block;background:var(--terracota);color:#fff;font-family:var(--f-ui);font-size:14px;font-weight:600;letter-spacing:.04em;text-align:center;padding:19px 20px;border-radius:10px;box-shadow:0 6px 18px rgba(160,92,58,.24)}
+.cta:hover{background:#B76A44;color:#fff}
+.cta-vazado{display:block;border:1px solid rgba(244,236,216,.45);color:var(--areia);font-family:var(--f-ui);font-size:14px;font-weight:600;text-align:center;padding:18px 20px;border-radius:10px}
+.cta-vazado:hover{background:rgba(244,236,216,.08);color:var(--areia)}
+.sob-cta{font-family:var(--f-ui);font-size:11.5px;letter-spacing:.06em;color:var(--pedra);text-align:center;margin:14px 0 0}
+
+.placeholder{border:1px dashed rgba(94,58,30,.3);border-radius:14px;background:repeating-linear-gradient(135deg,#FAF6EE,#FAF6EE 9px,#F1E9DA 9px,#F1E9DA 18px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-family:var(--f-ui);font-size:11px;letter-spacing:.08em;color:var(--pedra);line-height:1.7}
+.placeholder-escuro{border-color:rgba(244,236,216,.4);background:repeating-linear-gradient(135deg,rgba(244,236,216,.07),rgba(244,236,216,.07) 9px,rgba(244,236,216,.02) 9px,rgba(244,236,216,.02) 18px);color:rgba(244,236,216,.65)}
+
+.hero{background:var(--vinho);padding:44px 22px 52px;animation:fadeUp .7s ease both}
+.hero h1{font-size:40px;font-weight:700;line-height:1.1;color:var(--areia);text-wrap:pretty}
+.hero .sub{font-size:16.5px;line-height:1.75;color:rgba(244,236,216,.85);margin-bottom:26px;text-wrap:pretty}
+.hero .placeholder{height:300px;margin-bottom:26px}
+.hero .sob-cta{color:rgba(244,236,216,.6)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+.card{background:#fff;border:1px solid rgba(94,58,30,.12);border-radius:14px;padding:24px 22px}
+.pilha{display:flex;flex-direction:column;gap:14px}
+.dor-frase{font-family:var(--f-titulo);font-style:italic;font-size:19px;line-height:1.5;color:var(--castanho);margin-bottom:10px}
+.dor-texto{font-size:14.5px;line-height:1.75;color:var(--tinta);opacity:.8}
+.fecho{border-top:1px solid rgba(228,183,37,.5);padding-top:22px;margin-top:24px;font-size:16px;line-height:1.8;text-wrap:pretty}
+
+.lista-item{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.7}
+.lista-item .mk{flex:none;line-height:1.6}
+.mk-sim{color:var(--terracota);font-size:14px}
+.mk-nao{color:var(--vinho);font-size:13px}
+
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:26px}
+.pilar{background:#fff;border:1px solid rgba(94,58,30,.12);border-radius:12px;padding:18px 12px;text-align:center}
+.pilar .n{font-family:var(--f-titulo);font-style:italic;font-size:20px;color:var(--ouro);margin-bottom:8px}
+.pilar .t{font-family:var(--f-titulo);font-size:15px;font-weight:700;color:var(--castanho);margin-bottom:6px}
+.pilar .d{font-size:11.5px;line-height:1.55;color:var(--pedra)}
+
+.acordeao{background:#fff;border:1px solid rgba(94,58,30,.16);border-radius:12px;overflow:hidden}
+.acordeao > button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:none;border:none;padding:20px;cursor:pointer;text-align:left}
+.acordeao .titulo{font-family:var(--f-titulo);font-size:16.5px;font-weight:700;color:var(--castanho);line-height:1.35}
+.acordeao .sinal{font-family:var(--f-ui);font-size:19px;color:var(--terracota);flex:none;line-height:1}
+.acordeao .corpo{display:none;padding:0 20px 22px}
+.acordeao.aberto .corpo{display:block}
+.acordeao .resumo{font-size:14.5px;line-height:1.75;color:var(--tinta);opacity:.85;margin-bottom:14px}
+.aulas{display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(228,183,37,.45);padding-top:14px}
+.aula{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.65;color:var(--tinta);opacity:.8}
+.aula::before{content:'◆';font-family:var(--f-ui);font-size:10px;color:var(--ouro);line-height:1.9}
+
+.bonus{border:1.5px solid var(--terracota);border-radius:14px;padding:26px 22px}
+.bonus h3{font-size:23px;font-weight:700;color:var(--castanho);margin-bottom:8px}
+.bonus .intro{font-size:14px;line-height:1.7;color:var(--tinta);opacity:.8;margin-bottom:18px}
+.linha{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid rgba(94,58,30,.12)}
+.linha .nome{font-size:14.5px}
+.linha .valor{font-family:var(--f-ui);font-size:14px;font-weight:500;color:var(--castanho)}
+
+.carrossel{display:flex;gap:14px;overflow-x:auto;padding:0 22px 6px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carrossel::-webkit-scrollbar{display:none}
+.carrossel .placeholder{flex:none;width:210px;height:300px;border-radius:12px;scroll-snap-align:start}
+
+.oferta{background:var(--castanho)}
+.oferta h2{color:var(--areia);font-size:30px;margin-bottom:26px}
+.stack{border:1px solid rgba(228,183,37,.35);border-radius:14px;padding:22px;margin-bottom:30px}
+.stack .linha{border-top:none;padding:9px 0;color:var(--areia)}
+.stack .linha span{font-size:15px;color:var(--areia)}
+.stack .linha.total{border-top:1px solid rgba(228,183,37,.35);margin-top:10px;padding:16px 0 0}
+.stack .linha.total .de{font-family:var(--f-titulo);font-size:16px;font-weight:700}
+.stack .linha.total .riscado{font-family:var(--f-ui);font-size:16px;color:rgba(244,236,216,.5);text-decoration:line-through}
+.preco{font-family:var(--f-titulo);font-size:46px;font-weight:700;color:#fff;line-height:1;margin-bottom:10px}
+.a-vista{font-size:15px;color:rgba(244,236,216,.7);margin-bottom:28px}
+.seguranca{font-family:var(--f-ui);font-size:11px;letter-spacing:.06em;color:rgba(244,236,216,.55);text-align:center;margin-top:18px;line-height:1.7}
+
+.garantia{border:1px solid rgba(94,58,30,.16);border-radius:14px;padding:32px 24px;text-align:center}
+.garantia .t{font-family:var(--f-titulo);font-size:26px;font-weight:700;color:var(--castanho)}
+.garantia .filete{margin:16px auto}
+.garantia p{font-size:15px;line-height:1.8;opacity:.85;text-wrap:pretty}
+
+.autora{background:var(--vinho)}
+.autora .topo-bio{display:flex;gap:18px;align-items:flex-start;margin-bottom:22px}
+.autora .foto{flex:none;width:120px;height:150px;border-radius:10px}
+.autora h3{font-size:24px;font-weight:700;color:var(--areia);line-height:1.2;margin-bottom:12px}
+.autora .bio{font-size:15px;line-height:1.85;color:rgba(244,236,216,.9);text-wrap:pretty}
+.autora .bio + .bio{margin-top:14px}
+
+.fechamento{background:var(--areia);padding-bottom:60px;text-align:center}
+.fechamento .citacao{font-family:var(--f-titulo);font-style:italic;font-size:22px;line-height:1.5;color:var(--castanho);margin-bottom:26px;text-wrap:pretty}
+
+footer{background:var(--tinta);padding:34px 22px 40px;text-align:center}
+footer .marca{color:var(--areia);font-size:28px;margin-bottom:10px}
+footer .papel{font-family:var(--f-ui);font-size:9.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--pedra);margin-bottom:18px}
+footer .contato{font-style:italic;font-size:12px;line-height:1.8;color:rgba(156,136,114,.75)}
+footer a{color:rgba(156,136,114,.9)}
+
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:center;pointer-events:none;opacity:0;transform:translateY(100%);transition:opacity .3s ease,transform .3s ease}
+.barra.visivel{opacity:1;transform:none}
+.barra .interno{width:100%;max-width:480px;background:rgba(42,27,15,.96);backdrop-filter:blur(10px);padding:12px 16px;display:flex;align-items:center;gap:14px;pointer-events:auto;box-shadow:0 -6px 24px rgba(0,0,0,.25)}
+.barra .preco-min{font-family:var(--f-ui);font-size:15px;font-weight:600;color:#fff;line-height:1.2}
+.barra .sub-min{font-family:var(--f-ui);font-size:10.5px;color:rgba(244,236,216,.6);margin-top:3px}
+.barra .cta{flex:none;font-size:12.5px;padding:13px 20px;border-radius:8px;box-shadow:none}
+
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].visivel{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  [data-reveal],[data-reveal].visivel,.hero{opacity:1;transform:none;animation:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="topo">
+  <span class="marca">Prof. Kemily</span>
+  <button class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<nav class="menu" id="menu">
+  <a href="#problema">O problema</a>
+  <a href="#curriculo">O que você aprende</a>
+  <a href="#bonus">Bônus</a>
+  <a href="#oferta">A oferta</a>
+  <a href="#faq">Perguntas frequentes</a>
+</nav>
+
+<section class="hero">
+  <p class="label label-ouro">Curso online · Mães de 0 a 12 anos</p>
+  <h1>Seu filho pode amar ler. Você só precisa saber mediar.</h1>
+  <div class="filete"></div>
+  <p class="sub">Da escolha do livro certo para a idade dele à leitura em voz alta que prende a atenção do começo ao fim.</p>
+  <div class="placeholder placeholder-escuro">foto da Prof. Kemily<br>lendo com uma criança</div>
+  <a class="cta" href="#oferta">Quero formar meu filho leitor</a>
+  <p class="sob-cta">12x de R$ 51,04 · acesso por 1 ano</p>
+</section>
+
+<section id="problema" data-reveal style="background:var(--areia)">
+  <p class="label">O problema</p>
+  <h2>Você compra os livros. E depois?</h2>
+  <div class="pilha">
+    <div class="card">
+      <p class="dor-frase">“Não sei escolher o que é bom pra idade dele.”</p>
+      <p class="dor-texto">A estante da livraria é enorme e a indicação da internet nunca considera o seu filho — o temperamento dele, o momento dele, o que ele já sabe ouvir.</p>
+    </div>
+    <div class="card">
+      <p class="dor-frase">“Leio e não consigo prender a atenção.”</p>
+      <p class="dor-texto">Cinco minutos e ele já está de pé. Você fecha o livro com a sensação de que leitura, para ele, é obrigação.</p>
+    </div>
+    <div class="card">
+      <p class="dor-frase">“Ele só quer tela.”</p>
+      <p class="dor-texto">A tela entrega estímulo pronto. O livro pede mediação — e ninguém nunca te ensinou a fazer essa mediação.</p>
+    </div>
+  </div>
+  <p class="fecho">Não é falta de amor nem de tempo. É falta de método — e método se aprende.</p>
+</section>
+
+<section data-reveal>
+  <p class="label">Para quem é</p>
+  <div class="pilha">
+    <div class="card" style="border-color:rgba(94,58,30,.16)">
+      <h3 style="font-size:21px;font-weight:700;color:var(--castanho);margin-bottom:16px">É para você</h3>
+      <div class="pilha" style="gap:12px">
+        <p class="lista-item"><span class="mk mk-sim">✓</span>Você tem filhos de 0 a 12 anos e quer que a leitura seja parte da casa, não tarefa de escola.</p>
+        <p class="lista-item"><span class="mk mk-sim">✓</span>Você já comprou livros bonitos que ficaram parados na prateleira.</p>
+        <p class="lista-item"><span class="mk mk-sim">✓</span>Você quer critério próprio para escolher — sem depender de lista de influenciador.</p>
+      </div>
+    </div>
+    <div class="card" style="border-color:rgba(94,58,30,.16)">
+      <h3 style="font-size:21px;font-weight:700;color:var(--vinho);margin-bottom:16px">Não é</h3>
+      <div class="pilha" style="gap:12px">
+        <p class="lista-item"><span class="mk mk-nao">✕</span>Para quem procura truque rápido de fazer criança ler em uma semana.</p>
+        <p class="lista-item"><span class="mk mk-nao">✕</span>Para quem quer alfabetizar — aqui o trabalho é de formação de leitor.</p>
+        <p class="lista-item"><span class="mk mk-nao">✕</span>Para quem não pretende ler junto. O método exige a sua presença.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="curriculo" data-reveal style="background:var(--castanho)">
+  <p class="label label-ouro">O que você aprende</p>
+  <h2 style="color:var(--areia)">3 pilares · 6 módulos</h2>
+  <div class="pilares">
+    <div class="pilar"><p class="n">01</p><p class="t">Curadoria</p><p class="d">escolher o livro certo</p></div>
+    <div class="pilar"><p class="n">02</p><p class="t">Mediação</p><p class="d">ler de um jeito que prende</p></div>
+    <div class="pilar"><p class="n">03</p><p class="t">Formação</p><p class="d">o hábito que fica</p></div>
+  </div>
+  <div class="pilha" style="gap:10px">
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 0 · Comece Aqui</span><span class="sinal">+</span></button>
+      <div class="corpo">
+        <p class="resumo">Como usar o curso, o que preparar em casa e o combinado com a criança antes da primeira leitura.</p>
+        <div class="aulas"><p class="aula">Boas-vindas e mapa do curso</p><p class="aula">Montando o canto de leitura</p><p class="aula">O combinado com seu filho</p></div>
+      </div>
+    </div>
+    <div class="acordeao aberto">
+      <button type="button" aria-expanded="true"><span class="titulo">Módulo 1 · Literatura Infantil e Seleção</span><span class="sinal">−</span></button>
+      <div class="corpo">
+        <p class="resumo">Critérios reais para escolher um livro: idade, texto, ilustração e o que descartar sem culpa.</p>
+        <div class="aulas"><p class="aula">O que faz um livro ser bom</p><p class="aula">Faixa etária na prática</p><p class="aula">Ilustração conta uma história</p><p class="aula">Como montar a estante de casa</p></div>
+      </div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 2 · Leitura em Voz Alta</span><span class="sinal">+</span></button>
+      <div class="corpo">
+        <p class="resumo">Voz, ritmo e pausa — as três ferramentas que transformam a leitura em experiência.</p>
+        <div class="aulas"><p class="aula">Ritmo e respiração</p><p class="aula">Vozes de personagem sem exagero</p><p class="aula">O que fazer quando ele se distrai</p></div>
+      </div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 3 · Clássicos Infantis</span><span class="sinal">+</span></button>
+      <div class="corpo">
+        <p class="resumo">Os contos que atravessaram séculos e por que ainda funcionam com a criança de hoje.</p>
+        <div class="aulas"><p class="aula">Contos de fadas e medo</p><p class="aula">Fábulas e formação moral</p><p class="aula">Adaptar ou ler no original</p></div>
+      </div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 4 · Imaginação e Criatividade</span><span class="sinal">+</span></button>
+      <div class="corpo">
+        <p class="resumo">O que fazer depois de fechar o livro para a história continuar viva na casa.</p>
+        <div class="aulas"><p class="aula">Conversas depois da leitura</p><p class="aula">Brincar a história</p><p class="aula">Desenho, escrita e invenção</p></div>
+      </div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 5 · Amor pela leitura pra vida</span><span class="sinal">+</span></button>
+      <div class="corpo">
+        <p class="resumo">Como o hábito se sustenta quando a criança cresce e a rotina aperta.</p>
+        <div class="aulas"><p class="aula">Rotina que sobrevive à escola</p><p class="aula">Leitura na adolescência</p><p class="aula">Ler junto para sempre</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bonus" data-reveal>
+  <p class="label">Bônus</p>
+  <div class="pilha" style="gap:16px">
+    <div class="bonus">
+      <p class="label" style="letter-spacing:.18em;margin-bottom:10px">Bônus 1 · valor R$ 291</p>
+      <h3>As 3 Fantásticas Listas</h3>
+      <p class="intro">Títulos separados por idade, tema e momento de leitura — com o porquê de cada escolha.</p>
+      <div class="linha"><span class="nome">Livros para Crianças</span><span class="valor">R$ 97</span></div>
+      <div class="linha"><span class="nome">Livros para Adultos</span><span class="valor">R$ 97</span></div>
+      <div class="linha"><span class="nome">The Wonderful Book List</span><span class="valor">R$ 97</span></div>
+      <p style="font-style:italic;font-size:13.5px;color:var(--pedra);margin-top:14px">Todas com atualização inclusa.</p>
+    </div>
+    <div class="bonus">
+      <p class="label" style="letter-spacing:.18em;margin-bottom:10px">Bônus 2 · valor R$ 201</p>
+      <h3>Combo 3 Clubes do Livro 2026</h3>
+      <p class="intro">Três clássicos lidos em grupo, com encontros mediados por mim ao longo do ano.</p>
+      <div class="linha"><span class="nome">A Hora da Estrela</span><span class="valor">R$ 67</span></div>
+      <div class="linha"><span class="nome">Crime e Castigo</span><span class="valor">R$ 67</span></div>
+      <div class="linha"><span class="nome">Dom Casmurro</span><span class="valor">R$ 67</span></div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal style="background:var(--areia);padding-left:0;padding-right:0">
+  <p class="label" style="margin:0 22px 14px">Prova</p>
+  <h2 style="font-size:26px;line-height:1.25;margin:0 22px 22px">O que as mães mandam depois</h2>
+  <div class="carrossel">
+    <div class="placeholder">print WhatsApp</div>
+    <div class="placeholder">print WhatsApp</div>
+    <div class="placeholder">print WhatsApp</div>
+    <div class="placeholder">print WhatsApp</div>
+  </div>
+  <p style="font-family:var(--f-ui);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pedra);margin:16px 22px 0">Arraste para o lado →</p>
+</section>
+
+<section id="oferta" class="oferta" data-reveal style="padding-top:56px;padding-bottom:56px">
+  <p class="label label-ouro">A oferta</p>
+  <h2>Tudo o que você leva</h2>
+  <div class="stack">
+    <div class="linha"><span>Curso · 6 módulos</span><span>R$ 697</span></div>
+    <div class="linha"><span>Bônus 1 · 3 listas</span><span>R$ 291</span></div>
+    <div class="linha"><span>Bônus 2 · 3 clubes</span><span>R$ 201</span></div>
+    <div class="linha total"><span class="de">De</span><span class="riscado">R$ 1.189</span></div>
+  </div>
+  <p class="label label-ouro" style="font-size:11px;letter-spacing:.2em;margin-bottom:10px">Por</p>
+  <p class="preco">12x R$ 51,04</p>
+  <p class="a-vista">ou R$ 497 à vista</p>
+  <a class="cta" href="#" style="margin-bottom:12px">Quero formar meu filho leitor</a>
+  <a class="cta-vazado" href="#">Pagar R$ 497 à vista</a>
+  <p class="seguranca">Compra segura via Hotmart · Cartão, Pix ou boleto</p>
+</section>
+
+<section data-reveal>
+  <p class="label">Garantia</p>
+  <div class="garantia">
+    <p class="t">7 dias de garantia</p>
+    <div class="filete"></div>
+    <p>Entre, assista, leia com seu filho. Se em uma semana você sentir que não era para você, devolvo cada centavo — sem formulário, sem explicação.</p>
+  </div>
+</section>
+
+<section class="autora" data-reveal>
+  <p class="label label-ouro" style="margin-bottom:22px">Quem ensina</p>
+  <div class="topo-bio">
+    <div class="placeholder placeholder-escuro foto">foto</div>
+    <div>
+      <h3>Prof. Kemily Rodrigues</h3>
+      <p class="label label-ouro" style="letter-spacing:.18em;margin:0">Literatura · Educação Clássica</p>
+    </div>
+  </div>
+  <p class="bio">Sou professora de literatura e passei os últimos anos formando leitores — crianças que descobrem os livros e adultos que voltam a eles.</p>
+  <p class="bio">Este curso é o que eu explico às mães que me procuram: existe uma diferença entre ler e habitar um livro, e habitar se aprende com método.</p>
+</section>
+
+<section id="faq" data-reveal>
+  <p class="label" style="margin-bottom:20px">Perguntas frequentes</p>
+  <div class="pilha" style="gap:10px">
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo" style="font-size:16px">Por quanto tempo tenho acesso?</span><span class="sinal">+</span></button>
+      <div class="corpo"><p class="resumo" style="margin:0">Um ano completo a partir da compra, incluindo as atualizações das listas e os encontros dos clubes no período.</p></div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo" style="font-size:16px">Meu filho tem 3 anos, serve?</span><span class="sinal">+</span></button>
+      <div class="corpo"><p class="resumo" style="margin:0">Serve. O curso cobre de 0 a 12 anos e cada módulo indica o que fazer em cada faixa — com 3 anos o trabalho é de repertório e voz alta.</p></div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo" style="font-size:16px">E se eu não gostar?</span><span class="sinal">+</span></button>
+      <div class="corpo"><p class="resumo" style="margin:0">Você tem 7 dias para pedir reembolso integral. Basta responder o e-mail de compra: devolvo sem perguntar nada.</p></div>
+    </div>
+    <div class="acordeao">
+      <button type="button" aria-expanded="false"><span class="titulo" style="font-size:16px">Preciso ler muito para fazer o curso?</span><span class="sinal">+</span></button>
+      <div class="corpo"><p class="resumo" style="margin:0">Não. As aulas são em vídeo e curtas. O que você vai ler é junto com seu filho — e é exatamente isso que a gente ensina a fazer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fechamento" data-reveal>
+  <p class="citacao">“A leitura não é fuga da realidade — é o caminho mais profundo para compreendê-la.”</p>
+  <a class="cta" href="#">Quero formar meu filho leitor</a>
+  <p class="sob-cta">12x de R$ 51,04 · 7 dias de garantia</p>
+</section>
+
+<footer>
+  <p class="marca">Prof. Kemily</p>
+  <p class="papel">Literatura · Educação Clássica</p>
+  <p class="contato">profkemily.com.br · @profkemily<br><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
+</footer>
+
+</div>
+
+<div class="barra" id="barra">
+  <div class="interno">
+    <div style="flex:1;min-width:0">
+      <p class="preco-min">12x R$ 51,04</p>
+      <p class="sub-min">ou R$ 497 à vista</p>
+    </div>
+    <a class="cta" href="#oferta">Quero garantir</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btn-menu');
+  var menu = document.getElementById('menu');
+  btn.addEventListener('click', function(){
+    var aberto = menu.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') { menu.classList.remove('aberto'); btn.setAttribute('aria-expanded','false'); }
+  });
+
+  document.querySelectorAll('.acordeao > button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var item = b.parentElement;
+      var aberto = item.classList.toggle('aberto');
+      b.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      b.querySelector('.sinal').textContent = aberto ? '−' : '+';
+    });
+  });
+
+  var barra = document.getElementById('barra');
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  function atualizar(){
+    var ih = window.innerHeight || document.documentElement.clientHeight;
+    barra.classList.toggle('visivel', window.pageYOffset > 620);
+    reveals.forEach(function(el){
+      if (el.classList.contains('visivel')) return;
+      if (el.getBoundingClientRect().top < ih * 0.9) el.classList.add('visivel');
+    });
+  }
+  window.addEventListener('scroll', atualizar, { passive: true });
+  window.addEventListener('resize', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
