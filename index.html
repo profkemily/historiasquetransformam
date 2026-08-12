@@ -35,15 +35,7 @@ h2{font-size:28px;font-weight:700;line-height:1.2;color:var(--castanho);margin:0
 p{margin:0}
 .filete{width:44px;height:1px;background:var(--ouro);margin:22px 0}
 
-.topo{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(94,58,30,.14);display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
 .marca{font-family:var(--f-logo);font-size:29px;color:var(--castanho);line-height:1}
-.btn-menu{font-family:var(--f-ui);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--castanho);background:none;border:1px solid rgba(94,58,30,.28);border-radius:100px;padding:9px 18px;cursor:pointer}
-.btn-menu:hover{background:var(--areia)}
-.menu{display:none;position:sticky;top:57px;z-index:39;background:var(--castanho);padding:18px 22px 22px;flex-direction:column}
-.menu.aberto{display:flex}
-.menu a{font-size:15px;color:var(--areia);padding:11px 0;border-bottom:1px solid rgba(228,183,37,.16)}
-.menu a:last-child{border-bottom:none}
-.menu a:hover{color:var(--ouro)}
 
 .cta{display:block;background:var(--terracota);color:#fff;font-family:var(--f-ui);font-size:14px;font-weight:600;letter-spacing:.04em;text-align:center;padding:19px 20px;border-radius:10px;box-shadow:0 6px 18px rgba(160,92,58,.24)}
 .cta:hover{background:#B76A44;color:#fff}
@@ -58,6 +50,7 @@ p{margin:0}
 .hero h1{font-size:40px;font-weight:700;line-height:1.1;color:var(--areia);text-wrap:pretty}
 .hero .sub{font-size:16.5px;line-height:1.75;color:rgba(244,236,216,.85);margin-bottom:26px;text-wrap:pretty}
 .hero .placeholder{height:300px;margin-bottom:26px}
+.hero .hero-foto{width:100%;height:340px;object-fit:cover;object-position:top center;border-radius:14px;margin-bottom:26px}
 .hero .sob-cta{color:rgba(244,236,216,.6)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
@@ -75,8 +68,7 @@ p{margin:0}
 .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:26px}
 .pilar{background:#fff;border:1px solid rgba(94,58,30,.12);border-radius:12px;padding:18px 12px;text-align:center}
 .pilar .n{font-family:var(--f-titulo);font-style:italic;font-size:20px;color:var(--ouro);margin-bottom:8px}
-.pilar .t{font-family:var(--f-titulo);font-size:15px;font-weight:700;color:var(--castanho);margin-bottom:6px}
-.pilar .d{font-size:11.5px;line-height:1.55;color:var(--pedra)}
+.pilar .t{font-family:var(--f-titulo);font-size:13.5px;font-weight:700;line-height:1.3;color:var(--castanho)}
 
 .acordeao{background:#fff;border:1px solid rgba(94,58,30,.16);border-radius:12px;overflow:hidden}
 .acordeao > button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:none;border:none;padding:20px;cursor:pointer;text-align:left}
@@ -96,11 +88,12 @@ p{margin:0}
 .linha .nome{font-size:14.5px}
 .linha .valor{font-family:var(--f-ui);font-size:14px;font-weight:500;color:var(--castanho)}
 
-.carrossel{display:flex;gap:14px;overflow-x:auto;padding:0 22px 6px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carrossel{display:flex;gap:14px;overflow-x:auto;padding:0 22px 6px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab;user-select:none}
 .carrossel::-webkit-scrollbar{display:none}
+.carrossel.arrastando{cursor:grabbing;scroll-snap-type:none}
 .carrossel .placeholder{flex:none;width:210px;height:300px;border-radius:12px;scroll-snap-align:start}
-.carrossel .depoimento{flex:none;width:300px;border-radius:12px;overflow:hidden;scroll-snap-align:start;border:1px solid rgba(94,58,30,.14);box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.carrossel .depoimento img{width:100%;height:auto;display:block}
+.carrossel .depoimento{flex:none;width:300px;height:180px;border-radius:12px;overflow:hidden;scroll-snap-align:start;border:1px solid rgba(94,58,30,.14);box-shadow:0 4px 14px rgba(0,0,0,.08);background:#1a1a1a;display:flex;align-items:center;justify-content:center}
+.carrossel .depoimento img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;pointer-events:none}
 
 .oferta{background:var(--castanho)}
 .oferta h2{color:var(--areia);font-size:30px;margin-bottom:26px}
@@ -152,25 +145,12 @@ footer a{color:rgba(156,136,114,.9)}
 <body>
 <div class="page">
 
-<header class="topo">
-  <span class="marca">Prof. Kemily</span>
-  <button class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
-</header>
-
-<nav class="menu" id="menu">
-  <a href="#problema">O problema</a>
-  <a href="#curriculo">O que você aprende</a>
-  <a href="#bonus">Bônus</a>
-  <a href="#oferta">A oferta</a>
-  <a href="#faq">Perguntas frequentes</a>
-</nav>
-
 <section class="hero">
   <p class="label label-ouro">Curso online · Mães de 0 a 12 anos</p>
   <h1>Seu filho pode amar ler. Você só precisa saber mediar.</h1>
   <div class="filete"></div>
   <p class="sub">Da escolha do livro certo para a idade dele à leitura em voz alta que prende a atenção do começo ao fim.</p>
-  <div class="placeholder placeholder-escuro">foto da Prof. Kemily<br>lendo com uma criança</div>
+  <img class="hero-foto" src="assets/foto-kemily.jpg" alt="Foto de Prof. Kemily Rodrigues">
   <a class="cta" href="#oferta">Quero formar meu filho leitor</a>
   <p class="sob-cta">12x de R$ 51,04 · acesso por 1 ano</p>
 </section>
@@ -221,51 +201,51 @@ footer a{color:rgba(156,136,114,.9)}
   <p class="label label-ouro">O que você aprende</p>
   <h2 style="color:var(--areia)">3 pilares · 6 módulos</h2>
   <div class="pilares">
-    <div class="pilar"><p class="n">01</p><p class="t">Curadoria</p><p class="d">escolher o livro certo</p></div>
-    <div class="pilar"><p class="n">02</p><p class="t">Mediação</p><p class="d">ler de um jeito que prende</p></div>
-    <div class="pilar"><p class="n">03</p><p class="t">Formação</p><p class="d">o hábito que fica</p></div>
+    <div class="pilar"><p class="n">01</p><p class="t">Curadoria Estratégica e Segura</p></div>
+    <div class="pilar"><p class="n">02</p><p class="t">Domínio da Mediação Literária</p></div>
+    <div class="pilar"><p class="n">03</p><p class="t">Formação Intelectual e Moral</p></div>
   </div>
   <div class="pilha" style="gap:10px">
     <div class="acordeao">
-      <button type="button" aria-expanded="false"><span class="titulo">Módulo 0 · Comece Aqui</span><span class="sinal">+</span></button>
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo Zero · Comece Aqui</span><span class="sinal">+</span></button>
       <div class="corpo">
-        <p class="resumo">Como usar o curso, o que preparar em casa e o combinado com a criança antes da primeira leitura.</p>
-        <div class="aulas"><p class="aula">Boas-vindas e mapa do curso</p><p class="aula">Montando o canto de leitura</p><p class="aula">O combinado com seu filho</p></div>
+        <p class="resumo">O ponto de partida para alinhar suas expectativas e preparar o terreno para a transformação que o curso trará para sua família.</p>
+        <div class="aulas"><p class="aula">Aula de Boas-vindas e Mentalidade</p><p class="aula">Aula de Cronograma e Organização</p><p class="aula">Alinhamento de Expectativas</p></div>
       </div>
     </div>
     <div class="acordeao aberto">
-      <button type="button" aria-expanded="true"><span class="titulo">Módulo 1 · Literatura Infantil e Seleção</span><span class="sinal">−</span></button>
+      <button type="button" aria-expanded="true"><span class="titulo">Módulo 1 · Literatura Infantil e Seleção de Livros</span><span class="sinal">−</span></button>
       <div class="corpo">
-        <p class="resumo">Critérios reais para escolher um livro: idade, texto, ilustração e o que descartar sem culpa.</p>
-        <div class="aulas"><p class="aula">O que faz um livro ser bom</p><p class="aula">Faixa etária na prática</p><p class="aula">Ilustração conta uma história</p><p class="aula">Como montar a estante de casa</p></div>
+        <p class="resumo">O coração da sua transformação como mediadora — você deixa de ser alguém que apenas "compra livros" para se tornar a arquiteta do repertório cultural do seu filho.</p>
+        <div class="aulas"><p class="aula">Aula 1 · O Impacto Real da Literatura</p><p class="aula">Aula 2 · Seleção por Faixa Etária</p><p class="aula">Aula 3 · O Poder das Ilustrações</p><p class="aula">Aula 4 · Criando um Lar Literário</p></div>
       </div>
     </div>
     <div class="acordeao">
-      <button type="button" aria-expanded="false"><span class="titulo">Módulo 2 · Leitura em Voz Alta</span><span class="sinal">+</span></button>
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 2 · Leitura em Voz Alta (LVA)</span><span class="sinal">+</span></button>
       <div class="corpo">
-        <p class="resumo">Voz, ritmo e pausa — as três ferramentas que transformam a leitura em experiência.</p>
-        <div class="aulas"><p class="aula">Ritmo e respiração</p><p class="aula">Vozes de personagem sem exagero</p><p class="aula">O que fazer quando ele se distrai</p></div>
+        <p class="resumo">Um divisor de águas: transforma você no principal agente de desenvolvimento do seu filho, usando a ferramenta mais poderosa e acessível que existe.</p>
+        <div class="aulas"><p class="aula">Aula 1 · O Impacto da LVA no Desenvolvimento</p><p class="aula">Aula 2 · Técnicas de LVA (O que fazer e o que não fazer)</p><p class="aula">Aula 3 · O Rodízio de Livros e a Concentração</p></div>
       </div>
     </div>
     <div class="acordeao">
-      <button type="button" aria-expanded="false"><span class="titulo">Módulo 3 · Clássicos Infantis</span><span class="sinal">+</span></button>
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 3 · Explorando a Literatura Clássica Infantil</span><span class="sinal">+</span></button>
       <div class="corpo">
-        <p class="resumo">Os contos que atravessaram séculos e por que ainda funcionam com a criança de hoje.</p>
-        <div class="aulas"><p class="aula">Contos de fadas e medo</p><p class="aula">Fábulas e formação moral</p><p class="aula">Adaptar ou ler no original</p></div>
+        <p class="resumo">Onde você aprenderá a construir a base intelectual e moral mais sólida para o seu filho, com histórias que venceram o teste do tempo.</p>
+        <div class="aulas"><p class="aula">Aula 1 · O que é Literatura Clássica e seus Impactos</p><p class="aula">Aula 2 · Educação Clássica vs. Moderna</p><p class="aula">Aula 3 · Adaptação vs. Texto Integral</p><p class="aula">Aula 4 · Como Identificar um Bom Clássico</p></div>
       </div>
     </div>
     <div class="acordeao">
-      <button type="button" aria-expanded="false"><span class="titulo">Módulo 4 · Imaginação e Criatividade</span><span class="sinal">+</span></button>
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 4 · Estimulando a Imaginação e a Criatividade</span><span class="sinal">+</span></button>
       <div class="corpo">
-        <p class="resumo">O que fazer depois de fechar o livro para a história continuar viva na casa.</p>
-        <div class="aulas"><p class="aula">Conversas depois da leitura</p><p class="aula">Brincar a história</p><p class="aula">Desenho, escrita e invenção</p></div>
+        <p class="resumo">A promessa central aqui é a formação de um imaginário rico e virtuoso, transformando seu filho em alguém capaz de pensar livremente e agir com sabedoria.</p>
+        <div class="aulas"><p class="aula">Aula 1 · A Formação do Imaginário</p><p class="aula">Aula 2 · Literatura como Estímulo Criativo</p><p class="aula">Aula 3 · O Poder da Poesia e das Rimas</p><p class="aula">Aula 4 · Atividades Pós-Leitura</p></div>
       </div>
     </div>
     <div class="acordeao">
-      <button type="button" aria-expanded="false"><span class="titulo">Módulo 5 · Amor pela leitura pra vida</span><span class="sinal">+</span></button>
+      <button type="button" aria-expanded="false"><span class="titulo">Módulo 5 · Construindo o Amor pela Leitura ao Longo da Vida</span><span class="sinal">+</span></button>
       <div class="corpo">
-        <p class="resumo">Como o hábito se sustenta quando a criança cresce e a rotina aperta.</p>
-        <div class="aulas"><p class="aula">Rotina que sobrevive à escola</p><p class="aula">Leitura na adolescência</p><p class="aula">Ler junto para sempre</p></div>
+        <p class="resumo">O fechamento de ouro da sua jornada — garantindo que a semente plantada hoje floresça em um leitor apaixonado para sempre.</p>
+        <div class="aulas"><p class="aula">Aula 1 · Lidando com a Resistência (Crianças e Adolescentes)</p><p class="aula">Aula 2 · Organização do Ambiente e Cantinho Literário</p><p class="aula">Aula 3 · Alinhamento de Expectativas e Pequenas Vitórias</p><p class="aula">Aula 4 · O Compromisso Prático (Conclusão)</p></div>
       </div>
     </div>
   </div>
@@ -276,16 +256,16 @@ footer a{color:rgba(156,136,114,.9)}
   <div class="pilha" style="gap:16px">
     <div class="bonus">
       <p class="label" style="letter-spacing:.18em;margin-bottom:10px">Bônus 1 · valor R$ 291</p>
-      <h3>As 3 Fantásticas Listas</h3>
+      <h3>Combo das Listas Fantásticas</h3>
       <p class="intro">Títulos separados por idade, tema e momento de leitura — com o porquê de cada escolha.</p>
-      <div class="linha"><span class="nome">Livros para Crianças</span><span class="valor">R$ 97</span></div>
-      <div class="linha"><span class="nome">Livros para Adultos</span><span class="valor">R$ 97</span></div>
-      <div class="linha"><span class="nome">The Wonderful Book List</span><span class="valor">R$ 97</span></div>
+      <div class="linha"><span class="nome">A Fantástica Lista de Livros para Crianças</span><span class="valor">R$ 97</span></div>
+      <div class="linha"><span class="nome">A Fantástica Lista de Livros para Adultos</span><span class="valor">R$ 97</span></div>
+      <div class="linha"><span class="nome">The Wonderful Booklist</span><span class="valor">R$ 97</span></div>
       <p style="font-style:italic;font-size:13.5px;color:var(--pedra);margin-top:14px">Todas com atualização inclusa.</p>
     </div>
     <div class="bonus">
       <p class="label" style="letter-spacing:.18em;margin-bottom:10px">Bônus 2 · valor R$ 201</p>
-      <h3>Combo 3 Clubes do Livro 2026</h3>
+      <h3>Combo Clube dos Clássicos</h3>
       <p class="intro">Três clássicos lidos em grupo, com encontros mediados por mim ao longo do ano.</p>
       <div class="linha"><span class="nome">A Hora da Estrela</span><span class="valor">R$ 67</span></div>
       <div class="linha"><span class="nome">Crime e Castigo</span><span class="valor">R$ 67</span></div>
@@ -329,8 +309,7 @@ footer a{color:rgba(156,136,114,.9)}
   <p class="label label-ouro" style="font-size:11px;letter-spacing:.2em;margin-bottom:10px">Por</p>
   <p class="preco">12x R$ 51,04</p>
   <p class="a-vista">ou R$ 497 à vista</p>
-  <a class="cta" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10" style="margin-bottom:12px">Quero formar meu filho leitor</a>
-  <a class="cta-vazado" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10">Pagar R$ 497 à vista</a>
+  <a class="cta" href="https://pay.hotmart.com/F89980114F?off=97gl8323&checkoutMode=10">Quero formar meu filho leitor</a>
   <p class="seguranca">Compra segura via Hotmart · Cartão, Pix ou boleto</p>
 </section>
 
@@ -404,16 +383,6 @@ footer a{color:rgba(156,136,114,.9)}
 
 <script>
 (function(){
-  var btn = document.getElementById('btn-menu');
-  var menu = document.getElementById('menu');
-  btn.addEventListener('click', function(){
-    var aberto = menu.classList.toggle('aberto');
-    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
-  });
-  menu.addEventListener('click', function(e){
-    if (e.target.tagName === 'A') { menu.classList.remove('aberto'); btn.setAttribute('aria-expanded','false'); }
-  });
-
   document.querySelectorAll('.acordeao > button').forEach(function(b){
     b.addEventListener('click', function(){
       var item = b.parentElement;
@@ -449,12 +418,30 @@ footer a{color:rgba(156,136,114,.9)}
     }
     function iniciar(){ if (!autoplay) autoplay = setInterval(passo, 3200); }
     function pausar(){ pausado = true; clearInterval(autoplay); autoplay = null; setTimeout(function(){ pausado = false; iniciar(); }, 6000); }
-    carrossel.addEventListener('pointerdown', pausar);
     carrossel.addEventListener('wheel', pausar, { passive: true });
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if (e.isIntersecting) iniciar(); else { clearInterval(autoplay); autoplay = null; } });
     }, { threshold: 0.4 });
     io.observe(carrossel);
+
+    var arrastando = false, moveu = false, inicioX = 0, inicioScroll = 0;
+    carrossel.addEventListener('pointerdown', function(e){
+      arrastando = true; moveu = false;
+      inicioX = e.clientX; inicioScroll = carrossel.scrollLeft;
+      carrossel.classList.add('arrastando');
+      carrossel.setPointerCapture(e.pointerId);
+      pausar();
+    });
+    carrossel.addEventListener('pointermove', function(e){
+      if (!arrastando) return;
+      var delta = e.clientX - inicioX;
+      if (Math.abs(delta) > 4) moveu = true;
+      carrossel.scrollLeft = inicioScroll - delta;
+    });
+    function soltar(){ arrastando = false; carrossel.classList.remove('arrastando'); }
+    carrossel.addEventListener('pointerup', soltar);
+    carrossel.addEventListener('pointercancel', soltar);
+    carrossel.addEventListener('click', function(e){ if (moveu) { e.preventDefault(); moveu = false; } }, true);
   }
 })();
 </script>
